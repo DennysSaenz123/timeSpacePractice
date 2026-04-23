@@ -137,10 +137,10 @@ public class Practice {
         common.put(num, common.get(num) + 1);
       }
     }
-    int largest = 0;
-    for (int i = 0; i < common.size(); i++) {
-      if (common.get(i) > largest) {
-        largest = common.get(i);
+    int largest = common.get(nums[0]);
+    for (int num : common.keySet()) {
+      if (common.get(num) > common.get(largest)) {
+        largest = num;
       }
     }
     return largest;

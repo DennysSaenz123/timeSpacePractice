@@ -129,9 +129,21 @@ public class Practice {
    * @return the integer that shows up most commonly
    */
   public static int mostCommonTimeEfficient(int[] nums) {
-    // TODO: Complete this method with an implementation that runs
-    // in O(n) time. n = nums.length
-    return -1;
+    Map<Integer, Integer> common = new HashMap<>();
+    for (int num : nums) {
+      if (!common.containsKey(num)) {
+        common.put(num, 1);
+      } else {
+        common.put(num, common.get(num) + 1);
+      }
+    }
+    int largest = 0;
+    for (int i = 0; i < common.size(); i++) {
+      if (common.get(i) > largest) {
+        largest = common.get(i);
+      }
+    }
+    return largest;
   }
 
   /**

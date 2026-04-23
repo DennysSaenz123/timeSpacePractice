@@ -10,9 +10,15 @@ public class PracticeTest {
 
   @Test
   void testMostCommonTimeEfficientWithThreeDifferentNumbers() {
-    Practice timeEfficient = new Practice();
     int[] nums = {1, 1, 1, 2, 3, 3, 3, 3};
-    int mostCommon = timeEfficient.mostCommonTimeEfficient(nums);
+    int mostCommon = Practice.mostCommonTimeEfficient(nums);
     assertEquals(3, mostCommon);
+  }
+
+  @Test
+  void testMostCommonTimeEfficientWithEmptyArray() {
+    int[] nums = {};
+    int mostCommon = Practice.mostCommonTimeEfficient(nums);
+    assertEquals(0, mostCommon);
   }
 }

@@ -21,4 +21,17 @@ public class PracticeTest {
     int mostCommon = Practice.mostCommonTimeEfficient(nums);
     assertEquals(0, mostCommon);
   }
+
+    @Test
+  public void testReturnFreqNumSpaceEfficient() {
+    //arrange
+    int[] nums = {2,3,2,1,2};
+    int expected = 2;
+
+    //act
+    int actual = Practice.mostCommonSpaceEfficient(nums);
+
+    //assert
+    assertEquals(expected, actual);
+  }
 }
